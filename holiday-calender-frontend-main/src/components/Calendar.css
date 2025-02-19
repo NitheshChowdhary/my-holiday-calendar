@@ -1,0 +1,139 @@
+/* General */
+.calendar {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Month Header */
+.calendar h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* Days Header */
+.calendar-day-header {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #555;
+  padding: 8px 0;
+}
+
+/* Individual Days */
+.calendar-day {
+  min-height: 100px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+  padding: 10px;
+  transition: all 0.3s;
+}
+
+.calendar-day:hover {
+  background: #eef2ff;
+}
+
+/* Different Month Days */
+.different-month {
+  color: #ccc;
+  opacity: 0.6;
+}
+
+/* Holiday Style */
+.holiday {
+  background: #ffeb3b;
+  color: #333;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 5px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.holiday button {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Add Holiday Button */
+.add-holiday {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #0066cc;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.calendar-day:hover .add-holiday {
+  opacity: 1;
+}
+
+/* Controls */
+.calendar-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.calendar-controls button {
+  background: #0066cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.calendar-controls button:hover {
+  background: #004a99;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .calendar-grid {
+    gap: 2px;
+  }
+
+  .calendar-day {
+    min-height: 70px;
+    font-size: 12px;
+  }
+
+  .calendar-controls button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
